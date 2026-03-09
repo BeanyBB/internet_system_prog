@@ -1,0 +1,500 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2a37;
+  background: #f0f2f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #0f5cc0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+/* ── Navbar ─────────────────────────────────────────────────────────────────── */
+
+.navbar {
+  background: #0f172a;
+  color: #fff;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-link,
+.nav-button {
+  color: #fff;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.nav-link:hover,
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.welcome-text {
+  opacity: 0.75;
+  font-size: 0.9rem;
+}
+
+/* ── Layout ─────────────────────────────────────────────────────────────────── */
+
+.page-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #dbe4ef;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.auth-card {
+  max-width: 440px;
+  margin: 2rem auto;
+}
+
+/* ── Forms ──────────────────────────────────────────────────────────────────── */
+
+.form-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+  font-weight: 600;
+}
+
+input {
+  border: 1px solid #b8c7da;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font: inherit;
+}
+
+input:focus {
+  outline: 2px solid #0f5cc0;
+  outline-offset: 1px;
+}
+
+.primary-button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  background: #0f5cc0;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #0d4fa8;
+}
+
+.primary-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.muted {
+  color: #5d6b7e;
+}
+
+.error-text {
+  color: #b42318;
+}
+
+.success-text {
+  color: #15803d;
+  font-weight: 600;
+}
+
+/* ── Feed ───────────────────────────────────────────────────────────────────── */
+
+.feed-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Compose box ────────────────────────────────────────────────────────────── */
+
+.compose-card {
+  margin-bottom: 1rem;
+}
+
+.compose-card h2 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: #374151;
+}
+
+.compose-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.compose-textarea {
+  border: 1px solid #b8c7da;
+  border-radius: 8px;
+  padding: 0.65rem;
+  font: inherit;
+  resize: vertical;
+  min-height: 72px;
+}
+
+.compose-textarea:focus {
+  outline: 2px solid #0f5cc0;
+  outline-offset: 1px;
+}
+
+.compose-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.char-count {
+  font-size: 0.85rem;
+}
+
+.char-count-warn {
+  color: #b45309;
+  font-weight: 600;
+}
+
+/* ── Post card ──────────────────────────────────────────────────────────────── */
+
+.post-card {
+  background: #fff;
+  border: 1px solid #dbe4ef;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.65rem;
+  display: flex;
+  gap: 0.75rem;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+}
+
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0f5cc0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.post-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.post-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.post-username {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.post-time {
+  font-size: 0.82rem;
+}
+
+.post-content {
+  margin: 0 0 0.6rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.post-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.like-button {
+  background: none;
+  border: 1px solid #dbe4ef;
+  border-radius: 20px;
+  padding: 0.25rem 0.65rem;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #5d6b7e;
+  transition: background 0.15s, color 0.15s;
+}
+
+.like-button:hover {
+  background: #fce7f3;
+  border-color: #f9a8d4;
+  color: #be185d;
+}
+
+.like-button.liked {
+  background: #fce7f3;
+  border-color: #f9a8d4;
+  color: #be185d;
+  font-weight: 600;
+}
+
+.delete-button {
+  background: none;
+  border: 1px solid #fecaca;
+  border-radius: 20px;
+  padding: 0.25rem 0.65rem;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #b42318;
+}
+
+.delete-button:hover {
+  background: #fee2e2;
+}
+
+/* ── Profile header ─────────────────────────────────────────────────────────── */
+
+.profile-header-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.profile-avatar-large {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #0f5cc0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-name {
+  margin: 0 0 0.2rem;
+  font-size: 1.2rem;
+}
+
+/* ── Avatar images ──────────────────────────────────────────────────────────── */
+
+.avatar-img {
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-img-sm {
+  width: 40px;
+  height: 40px;
+}
+
+.avatar-img-lg {
+  width: 64px;
+  height: 64px;
+}
+
+/* ── Settings page ──────────────────────────────────────────────────────────── */
+
+.settings-card {
+  margin-bottom: 1rem;
+}
+
+.settings-card-title {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* ── Comment button ─────────────────────────────────────────────────────────── */
+
+.comment-button {
+  background: none;
+  border: 1px solid #dbe4ef;
+  border-radius: 20px;
+  padding: 0.25rem 0.65rem;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #5d6b7e;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.comment-button:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+
+/* ── Comment card ────────────────────────────────────────────────────────────── */
+
+.comment-card {
+  background: #fff;
+  border: 1px solid #dbe4ef;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 0.65rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+/* ── Post detail card ────────────────────────────────────────────────────────── */
+
+.post-detail-card {
+  border-left: 3px solid #0f5cc0;
+}
+
+/* ── Feed tabs ──────────────────────────────────────────────────────────────── */
+
+.feed-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #dbe4ef;
+}
+
+.feed-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  padding: 0.5rem 1.1rem;
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #5d6b7e;
+}
+
+.feed-tab:hover {
+  color: #0f5cc0;
+}
+
+.feed-tab-active {
+  color: #0f5cc0;
+  font-weight: 700;
+  border-bottom-color: #0f5cc0;
+}
+
+/* ── Follow button ───────────────────────────────────────────────────────────── */
+
+.follow-button {
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 1.1rem;
+  background: #0f5cc0;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.follow-button:hover:not(:disabled) {
+  background: #0d4fa8;
+}
+
+.follow-button-following {
+  background: transparent;
+  color: #0f5cc0;
+  border: 1.5px solid #0f5cc0;
+}
+
+.follow-button-following:hover:not(:disabled) {
+  background: #eff6ff;
+}
+
+.follow-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ── User search card ────────────────────────────────────────────────────────── */
+
+.user-search-card {
+  background: #fff;
+  border: 1px solid #dbe4ef;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+  transition: background 0.12s;
+}
+
+.user-search-card:hover {
+  background: #f8fafc;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+
+@media (max-width: 620px) {
+  .page-container {
+    padding: 0.5rem;
+  }
+}
